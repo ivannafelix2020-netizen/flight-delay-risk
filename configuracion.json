@@ -1,0 +1,56 @@
+{
+    "nombre_proyecto": "Flight Delay Risk",
+    "rutas": [
+        "JFK-LAX",
+        "SFO-LAX"
+    ],
+    "anticipaciones_validadas": [
+        30,
+        60,
+        90,
+        180
+    ],
+    "retraso_publicacion_supuesto": 90,
+    "prior_inicial": 0.2,
+    "alpha_suavizado": 50,
+    "variable_objetivo": "ArrDel15",
+    "modelo_activo": "modelo_original.joblib",
+    "features": [
+        "Origin",
+        "Reporting_Airline",
+        "Month",
+        "DayOfWeek",
+        "franja_horaria",
+        "minuto_salida",
+        "duracion_horas",
+        "dias_anticipacion",
+        "prior_historico",
+        "riesgo_historico_ruta",
+        "riesgo_historico_aerolinea_ruta",
+        "riesgo_historico_horario_ruta",
+        "riesgo_reciente_ruta_90d"
+    ],
+    "mapa_franjas": {
+        "8": "Mañana",
+        "13": "Mediodía",
+        "16": "Tarde",
+        "10": "Mediodía",
+        "19": "Noche",
+        "11": "Mediodía",
+        "18": "Tarde",
+        "17": "Tarde",
+        "6": "Mañana",
+        "7": "Mañana",
+        "12": "Mediodía",
+        "15": "Tarde",
+        "22": "Noche",
+        "20": "Noche",
+        "9": "Mañana",
+        "21": "Noche",
+        "14": "Mediodía",
+        "5": "Madrugada",
+        "23": "Noche"
+    },
+    "ultima_fecha_historica": "2026-08-31",
+    "nota": "Predicción condicional a vuelo operado y no desviado. La publicación BTS se aproxima mediante 90 días."
+}
